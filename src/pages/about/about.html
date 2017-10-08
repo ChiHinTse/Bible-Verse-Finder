@@ -1,0 +1,33 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon id="menuButton" name="menu" ></ion-icon>
+    </button>
+    <ion-title>In app purchase</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let product of products">
+    <ion-card-header>{{ product.title }}</ion-card-header>
+    <ion-card-content>
+      {{ product.description }}
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button block (click)="buy()">
+          Buy now - {{ product.price }}
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

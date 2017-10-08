@@ -1,0 +1,33 @@
+<!--
+  Generated template for the OccasionDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title><span text-color="my-custom-color">{{title}}</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card text-center *ngFor="let record of records; let i = index" >
+
+    <ion-card-header text-wrap>
+      {{record.verse}}
+    </ion-card-header>
+    <ion-card-content>
+      {{record.content}}
+      <div>
+        <button ion-button id="translateChineseButton" (click)="translateEng(i)">eng</button>
+        <button ion-button id="translateButton" (click)="translateChinese(i)">繁</button>
+      </div>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

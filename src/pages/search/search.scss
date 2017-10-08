@@ -1,0 +1,25 @@
+page-search {
+  .toolbar-background {
+    background-color: #008542;
+  }
+  .card-header{
+    background-color:#008542;
+    color: white;
+  }
+  #noRecords{
+    text-align: center;
+    margin-top: 50%;
+    color: #8e9093;
+    font-size: large;
+  }
+  .cardButton{
+    width: 40%;
+  }
+  #menuButton{
+    color: #ffffff;
+  }
+  [text-color="my-custom-color"] {
+    color: white;
+  }
+
+}

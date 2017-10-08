@@ -1,0 +1,39 @@
+page-occasion-details {
+  .card-header{
+    background-color:#ff3B30;
+    color: white;
+    text-align: left;
+  }
+
+  .card-content{
+    text-align: justify;
+  }
+  .toolbar-background {
+    background-color: #ff3B30;
+  }
+  #backButton{
+    color: white;
+  }
+  [text-color="my-custom-color"] {
+    color: white;
+  }
+  ion-header ion-icon.back-button-icon.icon {
+    color: white;
+  }
+  #translateButton{
+    margin: 0;
+    width:49%;
+    height: 20px;
+    background-color: #8e9093;
+    color: #2d2d2d;
+
+  }
+  #translateChineseButton{
+    margin: 0;
+    width:49%;
+    height: 20px;
+    background-color: #8e9093;
+    color: #2d2d2d;
+  }
+
+}

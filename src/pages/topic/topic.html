@@ -1,0 +1,30 @@
+<!--
+  Generated template for the TopicPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon id="menuButton" name="menu"></ion-icon>
+    </button>
+    <ion-title><span text-color="my-custom-color">Select Topic</span></ion-title>
+  </ion-navbar>
+
+
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+
+  <ion-list>
+    <button ion-item *ngFor="let topic of topics" (click)="openTopicDetailPage(topic.title)">
+      {{topic.title}}
+    </button>
+  </ion-list>
+
+</ion-content>

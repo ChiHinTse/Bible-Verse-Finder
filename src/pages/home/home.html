@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon id="menuButton" name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Living Water
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides autoplay="2500" loop="true" speed="1500"  pager>
+
+    <ion-slide id="slideTwo">
+      <h6 id="dailyVerse">{{dailyVerse.content}}</h6>
+      <p><ion-note>{{dailyVerse.verse}}</ion-note></p>
+
+    </ion-slide>
+
+
+  <ion-slide id="slideOne" >
+    <div *ngIf="degree">
+      <ion-icon name="{{iconString}}"></ion-icon>
+      <h6>{{degree}}°C</h6>
+      <h6>{{timezone}}</h6>
+      <h6>{{ date | date:'d-MMM-yy' }}</h6>
+      <div id="info">Powered by Dark Sky</div>
+
+
+    </div>
+
+  </ion-slide>
+
+  </ion-slides>
+
+  <button id="topicButton" ion-button (click)="openTopicPage()" >
+    <div><ion-icon  name="ios-leaf"></ion-icon>
+      <p>Select Topic</p>
+    </div>
+  </button>
+  <button id="occasionButton" ion-button (click)="openOccasionsPage()" >
+    <div><ion-icon  name="ios-book" md="md-book"></ion-icon>
+      <p>Select occasion</p>
+    </div></button>
+  <button id="searchButton" ion-button  (click)="openSearchPage()">
+    <div><ion-icon  name="ios-search"></ion-icon>
+      <p>Inputting keywords</p>
+    </div>
+  </button>
+</ion-content>
